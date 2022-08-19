@@ -1,0 +1,22 @@
+ALGORITHM sum_of_two_distinct_arrays
+VAR
+    a,b : ARRAY[1..x] OF INTEGER;
+    b : ARRAY[1..z] OF INTEGER;
+    i,j,k,m,x,z : INTEGER;
+    sum : INTEGER := 0;
+BEGIN
+    FOR i := 1 TO x DO
+        Read(a[i]);
+    END_FOR
+    FOR j := 1 TO z DO
+        Read(b[j]);
+    END_FOR
+    FOR k := 1 TO x DO
+        FOR m:= 1 TO z DO   
+            IF (a[k] == b[m]) THEN
+                sum := sum + a[k];
+            END_IF
+        END_FOR
+    END_FOR
+    Write(sum);
+END

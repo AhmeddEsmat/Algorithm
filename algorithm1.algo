@@ -1,0 +1,17 @@
+ALGORITHM num_of_words_and_vowels
+VAR
+    str : STRING[] := "Hello World.";
+    i : INTEGER;
+    word,vowels : INTEGER := 0;
+BEGIN
+    str.lowerCase;
+    FOR i := 1 TO str.length DO
+        IF (str[i] == " " || str[i] == ".") THEN
+            words++;
+        END_IF
+        IF (str[i] == "a" || str[i] == "e" || str[i] == "i" || str[i] == "o" || str[i] == "u") THEN
+            vowels++;
+        END_IF
+    END_FOR
+    Write(sum);
+END
